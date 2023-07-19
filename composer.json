@@ -31,11 +31,6 @@
             "YassineChe\\LaravelDokan\\Database\\Factories\\": "database/factories/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "YassineChe\\LaravelDokan\\Tests\\": "tests/"
-        }
-    },
     "config": {
         "sort-packages": true
     },
