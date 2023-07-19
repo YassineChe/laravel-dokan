@@ -92,7 +92,7 @@ try {
     LaravelDokanProduct::getProductSummary();
 
     // Create a new product
-    $newProduct = LaravelDokanProduct::createProduct([
+    LaravelDokanProduct::createProduct([
         'name' => 'New Product',
         'price' => 49.99,
     ]);
@@ -178,10 +178,10 @@ try {
     LaravelDokanAttribute::getAllAttributes();
 
     // Get a specific attribute by ID
-    $attribute = LaravelDokanAttribute::getAttribute($attributeId);
+    LaravelDokanAttribute::getAttribute($attributeId);
 
     // Create a new attribute
-    $createdAttribute = LaravelDokanAttribute::createAttribute([
+    LaravelDokanAttribute::createAttribute([
         'name' => 'Color',
         'slug' => 'color',
         'type' => 'select',
@@ -189,7 +189,7 @@ try {
     ]);
 
     // Update an attribute
-    LaravelDokanAttribute::updateAttribute($attributeId, $updatedAttributeData = [
+    LaravelDokanAttribute::updateAttribute($attributeId,[
         'name' => 'Size',
         'slug' => 'size',
         'type' => 'select',
@@ -225,7 +225,7 @@ try {
     ]);
 
     // Update an attribute term for a given attribute ID and term ID
-    LaravelDokanAttributeTerm::updateAttributeTerm($attributeId, $updatedTermId, $updatedAttributeTerm = [
+    LaravelDokanAttributeTerm::updateAttributeTerm($attributeId, $updatedTermId,[
         'name' => 'Updated Term',
         'slug' => 'updated-term',
     ]);
