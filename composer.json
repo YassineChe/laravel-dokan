@@ -1,0 +1,64 @@
+{
+    "name": "yassineche/laravel-dokan",
+    "description": "The Dokan-Laravel API Connector Package is a powerful integration solution that enables seamless communication between the Dokan plugin for WordPress and your Laravel API. This package empowers developers to effortlessly synchronize and exchange data between their WordPress-based marketplace and their Laravel-powered backend.",
+    "keywords": [
+        "YassineChe",
+        "laravel",
+        "laravel-dokan",
+        "dokan-api",
+        "marketplace",
+        "woocommerce"
+    ],
+    "homepage": "https://github.com/yassineche/laravel-dokan",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yassineche",
+            "email": "ysn.cheddadi@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.7",
+        "illuminate/contracts": "^10.0",
+        "spatie/laravel-package-tools": "^1.14.0",
+        "spatie/php-structure-discoverer": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "YassineChe\\LaravelDokan\\": "src/",
+            "YassineChe\\LaravelDokan\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "YassineChe\\LaravelDokan\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YassineChe\\LaravelDokan\\LaravelDokanServiceProvider"
+            ],
+            "aliases": {
+                "LaravelDokanProduct": "YassineChe\\LaravelDokan\\Facades\\LaravelDokanProduct",
+                "LaravelDokanProductVariations": "YassineChe\\LaravelDokan\\Facades\\LaravelDokanProductVariations",
+                "LaravelDokanCoupon": "YassineChe\\LaravelDokan\\Facades\\LaravelDokanCoupon",
+                "LaravelDokanOrder": "YassineChe\\LaravelDokan\\Facades\\LaravelDokanOrder",
+                "LaravelDokanOrderNote": "YassineChe\\LaravelDokan\\Facades\\LaravelDokanOrderNote",
+                "LaravelDokanWithdraw": "YassineChe\\LaravelDokan\\Facades\\LaravelDokanWithdraw",
+                "LaravelDokanStore": "YassineChe\\LaravelDokan\\Facades\\LaravelDokanStore",
+                "LaravelDokanReview": "YassineChe\\LaravelDokan\\Facades\\LaravelDokanReview",
+                "LaravelDokanSetting": "YassineChe\\LaravelDokan\\Facades\\LaravelDokanSetting",
+                "LaravelDokanAttribute" : "YassineChe\\LaravelDokan\\Facades\\LaravelDokanAttribute",
+                "LaravelDokanAttributeTerm" : "YassineChe\\LaravelDokan\\Facades\\LaravelDokanAttributeTerm"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
