@@ -74,31 +74,28 @@ use LaravelDokanProduct;
 
 try {
     // Get all products
-    $products = LaravelDokanProduct::getAllProducts();
+    LaravelDokanProduct::getAllProducts();
 
     // Get a product by ID
-    $productId = 1;
-    $product = LaravelDokanProduct::getProduct($productId);
+    LaravelDokanProduct::getProduct($productId);
 
     // Delete a product by ID
     LaravelDokanProduct::deleteProduct($productId);
 
     // Update a product
-    $updatedProductData = [
+    LaravelDokanProduct::updateProduct($productId, [
         'name' => 'Updated Product',
         'price' => 99.99,
-    ];
-    $updatedProduct = LaravelDokanProduct::updateProduct($productId, $updatedProductData);
+    ]);
 
     // Get product summary
-    $productSummary = LaravelDokanProduct::getProductSummary();
+    LaravelDokanProduct::getProductSummary();
 
     // Create a new product
-    $newProductData = [
+    $newProduct = LaravelDokanProduct::createProduct([
         'name' => 'New Product',
         'price' => 49.99,
-    ];
-    $newProduct = LaravelDokanProduct::createProduct($newProductData);
+    ]);
 
 } catch (\Exception $e) {
     echo $e->getMessage();
@@ -112,7 +109,7 @@ use LaravelDokanProductVariations;
 
 try {
     // Create product variations for a specific product
-    LaravelDokanProductVariations::createProductVariations(1,[
+    LaravelDokanProductVariations::createProductVariations($productId,[
             'name' => 'Variation 1',
             'price' => 9.99,
     ]);
@@ -121,9 +118,7 @@ try {
     LaravelDokanProductVariations::getAllProductVariations($productId);
 
     // Get a specific product variation by its IDs
-    $productId = 1;
-    $variationId = 1;
-    $variation = LaravelDokanProductVariations::getProductVariation($productId, $variationId);
+    LaravelDokanProductVariations::getProductVariation($productId, $variationId);
 
     // Update a specific product variation
     LaravelDokanProductVariations::updateProductVariation($productId, $variationId, $[
@@ -132,7 +127,7 @@ try {
     ]);
 
     // Delete a specific product variation
-LaravelDokanProductVariations::deleteProductVariation($productId, $variationId);
+    LaravelDokanProductVariations::deleteProductVariation($productId, $variationId);
 
 } catch (\Exception $e) {
     echo $e->getMessage();
