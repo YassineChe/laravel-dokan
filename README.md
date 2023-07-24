@@ -171,7 +171,7 @@ try {
 
 ```shell
 
-use YassineChe\LaravelDokan\Facades\LaravelDokanAttribute;
+use LaravelDokanAttribute;
 
 try {
     // Get all attributes
